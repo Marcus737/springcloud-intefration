@@ -6,6 +6,25 @@ spring:
     url: jdbc:mysql://localhost:3306/sc?serverTimeZone=Asia/Shanghai
   jpa:
     show-sql: true
+  application:
+    name: dept-service
 server:
   port: 8001
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+
+  #      defaultZone: http://127.0.0.1:7001/eureka, http://127.0.0.1:7002/eureka, http://127.0.0.1:7003/eureka, 集群配置
+  instance:
+#    instance-id: dept-8001.com
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2 # 设置心跳间隔时间
+    lease-expiration-duration-in-seconds: 5 # 超时的时间
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

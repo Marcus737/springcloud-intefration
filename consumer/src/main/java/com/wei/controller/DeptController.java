@@ -12,9 +12,9 @@ import java.util.List;
 @RequestMapping("/consumer/dept")
 public class DeptController {
 
-    private static final String ADD = "http://127.0.0.1:8001/dept/add";
-    private static final String GET = "http://127.0.0.1:8001/dept/get";
-    private static final String LIST = "http://127.0.0.1:8001/dept/list";
+    private static final String ADD = "http://dept-service/dept/add";
+    private static final String GET = "http://dept-service/dept/get";
+    private static final String LIST = "http://dept-service/dept/list";
 
     @Resource
     RestTemplate restTemplate;

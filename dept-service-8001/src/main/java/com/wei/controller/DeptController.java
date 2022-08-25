@@ -3,6 +3,7 @@ package com.wei.controller;
 import com.wei.dao.DeptDao;
 import com.wei.dto.DeptDTO;
 import com.wei.service.DeptService;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -14,6 +15,9 @@ public class DeptController {
 
     @Resource
     DeptService deptService;
+
+    @Resource
+    DiscoveryClient client;
 
     @PostMapping("/add")
     public Object add(@RequestBody DeptDTO deptDTO){
@@ -29,5 +33,10 @@ public class DeptController {
     @GetMapping("/list")
     public Object list(){
         return deptService.list();
+    }
+
+    @RequestMapping("/discover")
+    public Object di(){
+        return client;
     }
 }

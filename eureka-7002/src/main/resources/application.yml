@@ -1,0 +1,16 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: eureka-server7002
+
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 1000 # 设置清理服务的间隔
+    enable-self-preservation: true # 默认开启自我保护模式
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:7001/erueka, http://127.0.0.1:7003/erueka
+
