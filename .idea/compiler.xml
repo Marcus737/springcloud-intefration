@@ -7,6 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-api" />
+        <module name="security" />
+        <module name="dept-service-swagger" />
+        <module name="consumer" />
         <module name="dept-service-8001" />
       </profile>
     </annotationProcessing>
