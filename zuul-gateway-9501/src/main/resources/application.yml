@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: zuul-gateway
+server:
+  port: 9501
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    instance-id: zuul-gateway-9501
+
+zuul:
+  ignored-services: # disable micro service
+    ""
+  routes: # routes proxy
+    dept-service: /dept-proxy/**
+  prefix: /proxy

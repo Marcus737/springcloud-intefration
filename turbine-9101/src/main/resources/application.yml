@@ -1,0 +1,12 @@
+server:
+  port: 9101
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+    register-with-eureka: false
+    fetch-registry: true
+turbine:
+  app-config: dept-service
+  cluster-name-expression: new String("default")

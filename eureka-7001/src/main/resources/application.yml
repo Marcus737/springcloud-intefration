@@ -6,11 +6,11 @@ spring:
 
 eureka:
   server:
-    eviction-interval-timer-in-ms: 1000 # 设置清理服务的间隔
+    eviction-interval-timer-in-ms: 60000 # 设置清理服务的间隔
     enable-self-preservation: true # 默认开启自我保护模式
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-#      defaultZone: http://127.0.0.1:7003/erueka, http://127.0.0.1:7002/erueka 集群配置
-      defaultZone: http://127.0.0.1:7001
+#      defaultZone: http://127.0.0.1:7003/eureka, http://127.0.0.1:7002/eureka 集群配置
+      defaultZone: http://127.0.0.1:7001/eureka

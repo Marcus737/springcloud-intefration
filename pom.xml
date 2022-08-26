@@ -16,13 +16,17 @@
     <modules>
         <module>common-api</module>
         <module>dept-service-8001</module>
-        <module>consumer</module>
-        <module>dept-service-swagger</module>
+        <module>consumer-80</module>
+        <module>dept-service-8002</module>
         <module>security</module>
         <module>eureka-7001</module>
         <module>eureka-7002</module>
         <module>eureka-7003</module>
-        <module>dept-seervice-8003</module>
+        <module>dept-service-8003</module>
+        <module>consumer-feign-81</module>
+        <module>hystrix-dashboard-9001</module>
+        <module>turbine-9101</module>
+        <module>zuul-gateway</module>
     </modules>
 
     <properties>
